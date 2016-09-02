@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Banco De Dados</string>
     <string name="action_settings">Settings</string>
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_acesa">Revoke Acess</string>
+
 </resources>

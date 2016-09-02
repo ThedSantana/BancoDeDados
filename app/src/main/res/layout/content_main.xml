@@ -26,30 +26,19 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alterar"
-        android:id="@+id/buttonAlterar"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/buttonAdd"
-        android:layout_alignLeft="@+id/buttonAdd"
-        android:layout_alignStart="@+id/buttonAdd" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remover"
-        android:id="@+id/buttonRemover"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/buttonAlterar"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Consulta"
         android:id="@+id/buttonConsulta"
-        android:layout_below="@+id/buttonRemover"
+        android:layout_below="@+id/buttonAdd"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fazer Backup"
+        android:id="@+id/buttonBackup"
+        android:layout_below="@+id/buttonConsulta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>

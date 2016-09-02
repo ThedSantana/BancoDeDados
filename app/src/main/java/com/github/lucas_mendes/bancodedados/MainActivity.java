@@ -1,5 +1,6 @@
 package com.github.lucas_mendes.bancodedados;
 
+import android.app.backup.BackupManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private BancoDeDadosAgent bancoDeDadosAgent = new BancoDeDadosAgent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button buttonCriar = (Button) findViewById(R.id.buttonAdd);
-        Button buttonAlerar = (Button) findViewById(R.id.buttonAlterar);
-        Button buttonRemover = (Button) findViewById(R.id.buttonRemover);
         Button buttonConsultar = (Button) findViewById(R.id.buttonConsulta);
+        Button buttonBackup = (Button) findViewById(R.id.buttonBackup);
 
         final Intent intent = new Intent(MainActivity.this, InsereDado.class);
         final Intent intent2 = new Intent(MainActivity.this, Consulta.class);
@@ -53,6 +54,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonBackup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                requestBackup();
+//                finish();
+            }
+        });
 
     }
 
@@ -76,5 +84,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void requestBackup() {
+        BackupManager bm = new BackupManager(getApplicationContext());
+        bm.dataChanged();
     }
 }
